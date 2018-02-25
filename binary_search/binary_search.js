@@ -1,5 +1,3 @@
-
-
 /** 迭代算法实现
  * 
 */
@@ -40,9 +38,14 @@ function rbinary_search(arrayList, target, lo, hi) {
 
 }
 
-var arrayList = [2, 3, 4, 5, 6, 10, 14, 23, 46, 75, 79, 100];
+var arrayList = [2, 3, 4, 5, 6, 10, 14, 23, 46, 75, 79, 100, 1000, 2999, 4000, 5555, 22222];
+
+console.log('arrayList length ', arrayList.length);
+
+console.log('i_binary_search', ibinary_search(arrayList, 79));
+console.log('r_binary_search', rbinary_search(arrayList, -1, 0, arrayList.length - 1));
 
 for (var i = 0; i < arrayList.length; ++i) {
-      console.log('i_binary_search', ibinary_search(arrayList, arrayList[i]));
-      console.log('r_binary_search', rbinary_search(arrayList, arrayList[i], 0, arrayList.length - 1));
+      // console.log('i_binary_search', ibinary_search(arrayList, arrayList[i]));
+      // console.log('r_binary_search', rbinary_search(arrayList, arrayList[i], 0, arrayList.length - 1));
 }
