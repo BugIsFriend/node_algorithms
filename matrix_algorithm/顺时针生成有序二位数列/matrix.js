@@ -1,65 +1,65 @@
 
-var matrics = null; 
+var matrics = null;
 var count = 0;
-var rows=7,cols=7;
-function initMatrics(row,col){
+var rows = 7, cols = 7;
+function initMatrics(row, col) {
     matrics = new Array(row);
-    for(let i=0; i<row; ++i){
+    for (let i = 0; i < row; ++i) {
         matrics[i] = new Array(col);
-        for(let j=0; j<col; ++j){
+        for (let j = 0; j < col; ++j) {
             matrics[i][j] = 0;
         }
     }
-    minRowChange(0, 0, row-1, 0, col-1)
-} 
+    minRowChange(0, 0, row - 1, 0, col - 1)
+}
 
-function displayMatircs(row,col){
-    for(let i=0; i<row; ++i){
+function displayMatircs(row, col) {
+    for (let i = 0; i < row; ++i) {
         console.log(matrics[i]);
     }
 }
 
-function minRowChange(curRow,minRow,maxRow,minCol,maxCol){  
-    for(let i=minCol; i<=maxCol; ++i){
+function minRowChange(curRow, minRow, maxRow, minCol, maxCol) {
+    for (let i = minCol; i <= maxCol; ++i) {
         matrics[curRow][i] = ++count;
     }
     ++minRow;
-    if(minRow<=maxRow){
-        maxColChange(maxCol,minRow,maxRow,minCol,maxCol,)
+    if (minRow <= maxRow) {
+        maxColChange(maxCol, minRow, maxRow, minCol, maxCol, )
     }
 }
 
-function maxColChange(curCol,minRow,maxRow,minCol,maxCol){
-    for(let i=minRow; i<=maxRow; ++i){
+function maxColChange(curCol, minRow, maxRow, minCol, maxCol) {
+    for (let i = minRow; i <= maxRow; ++i) {
         matrics[i][curCol] = ++count;
     }
     --maxCol;
-    if(minCol<=maxCol){
-        maxRowChange(maxRow,minRow,maxRow,minCol,maxCol);
+    if (minCol <= maxCol) {
+        maxRowChange(maxRow, minRow, maxRow, minCol, maxCol);
     }
 }
 
-function maxRowChange(curRow,minRow,maxRow,minCol,maxCol){
-    for(let i =maxCol; i>=minCol; --i){
+function maxRowChange(curRow, minRow, maxRow, minCol, maxCol) {
+    for (let i = maxCol; i >= minCol; --i) {
         matrics[curRow][i] = ++count;
     }
     --maxRow
-    if(minRow<=maxRow){
-        minColChange(minCol,minRow,maxRow,minCol,maxCol);
+    if (minRow <= maxRow) {
+        minColChange(minCol, minRow, maxRow, minCol, maxCol);
     }
 }
 
-function minColChange(curCol,minRow,maxRow,minCol,maxCol){
-    for(let i=maxRow; i>=minRow; --i){
+function minColChange(curCol, minRow, maxRow, minCol, maxCol) {
+    for (let i = maxRow; i >= minRow; --i) {
         matrics[i][curCol] = ++count;
     }
     ++minCol;
-    if(minCol<=maxCol){
-        minRowChange(minRow,minRow,maxRow,minCol,maxCol);
+    if (minCol <= maxCol) {
+        minRowChange(minRow, minRow, maxRow, minCol, maxCol);
     }
 }
-initMatrics(rows,cols)
-displayMatircs(rows,rows)
+initMatrics(rows, cols)
+displayMatircs(rows, rows)
 
 
 /* 输出结果
