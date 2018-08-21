@@ -32,3 +32,6 @@ function permute(source_t, target_t, all_combination) {
 
 permute(source_t, target_t, all_solutions);
 // console.log('sss11    ' + JSON.stringify(all_solutions))
+// console.log('sss11    ' + JSON.stringify(all_solutions))
+// console.log('sss11    ' + JSON.stringify(all_solutions))
+console.log('sss11    ' + JSON.stringify(all_solutions))
