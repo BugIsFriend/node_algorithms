@@ -2,7 +2,9 @@
  * @Author: myerse.lee 
  * @Date: 2018-11-18 12:33:07 
  * @Last Modified by: myerse.lee
- * @Last Modified time: 2018-12-10 20:22:04
+ * @Last Modified time: 2020-03-05 16:25:29
+ * 排列组合算法；
+ * 
  */
 
 var source_t = [3, 4, 5, 6, 7]
