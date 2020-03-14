@@ -25,7 +25,7 @@ function minRowChange(curRow, minRow, maxRow, minCol, maxCol) {
     }
     ++minRow;
     if (minRow <= maxRow) {
-        maxColChange(maxCol, minRow, maxRow, minCol, maxCol, )
+        maxColChange(maxCol, minRow, maxRow, minCol, maxCol)
     }
 }
 
@@ -71,7 +71,6 @@ displayMatircs(rows, rows)
 [ 20, 37, 36, 35, 34, 33, 12 ]
 [ 19, 18, 17, 16, 15, 14, 13 ]
 */
-
 
 
 

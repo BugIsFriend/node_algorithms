@@ -46,10 +46,6 @@ console.log('sss11    ' + JSON.stringify(all_solutions))
 console.log('sss11    ' + all_solutions.length)
 
 
-
-
-
-
 async function asyncFunc() {
     for (let i = 0; i < 10; ++i) {
         await new Promise((resolve, reject) => {
