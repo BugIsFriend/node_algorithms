@@ -1,65 +1,81 @@
+/*
+ * @Author: myerse.lee 
+ * @Date: 2018-10-11 21:57:44 
+ * @Last Modified by: myerse.lee
+ * @Last Modified time: 2020-06-06 17:15:50
+ * @ Desc: 螺旋矩阵；
+ */
 
-var matrics = null;
-var count = 0;
-var rows = 7, cols = 7;
-function initMatrics(row, col) {
-    matrics = new Array(row);
-    for (let i = 0; i < row; ++i) {
-        matrics[i] = new Array(col);
-        for (let j = 0; j < col; ++j) {
-            matrics[i][j] = 0;
+class SpinMatrics {
+
+    constructor(row, col) {
+        this._row = row;
+        this._col = col;
+        this._count = 0;
+        this._matrics = null;
+        this.initMatrix();
+    }
+
+    initMatrix() {
+        this._matrics = new Array(this._row);
+        for (let i = 0; i < this._row; ++i) {
+            this._matrics[i] = new Array(this._col);
+            for (let j = 0; j < this._col; ++j) {
+                this._matrics[i][j] = 0;
+            }
+        }
+        this.minRowChange(0, 0, this._row - 1, 0, this._col - 1)
+    }
+
+    minRowChange(curRow, minRow, maxRow, minCol, maxCol) {
+        for (let i = minCol; i <= maxCol; ++i) {
+            this._matrics[curRow][i] = ++this._count;
+        }
+        ++minRow;
+        if (minRow <= maxRow) {
+            this.maxColChange(maxCol, minRow, maxRow, minCol, maxCol)
         }
     }
-    minRowChange(0, 0, row - 1, 0, col - 1)
+
+    maxColChange(curCol, minRow, maxRow, minCol, maxCol) {
+        for (let i = minRow; i <= maxRow; ++i) {
+            this._matrics[i][curCol] = ++this._count;
+        }
+        --maxCol;
+        if (minCol <= maxCol) {
+            this.maxRowChange(maxRow, minRow, maxRow, minCol, maxCol);
+        }
+    }
+
+    maxRowChange(curRow, minRow, maxRow, minCol, maxCol) {
+        for (let i = maxCol; i >= minCol; --i) {
+            this._matrics[curRow][i] = ++this._count;
+        }
+        --maxRow
+        if (minRow <= maxRow) {
+            this.minColChange(minCol, minRow, maxRow, minCol, maxCol);
+        }
+    }
+
+    minColChange(curCol, minRow, maxRow, minCol, maxCol) {
+        for (let i = maxRow; i >= minRow; --i) {
+            this._matrics[i][curCol] = ++this._count;
+        }
+        ++minCol;
+        if (minCol <= maxCol) {
+            this.minRowChange(minRow, minRow, maxRow, minCol, maxCol);
+        }
+    }
+
+    displayMatircs() {
+        for (let i = 0; i < this._row; ++i) {
+            console.log(this._matrics[i]);
+        }
+    }
 }
 
-function displayMatircs(row, col) {
-    for (let i = 0; i < row; ++i) {
-        console.log(matrics[i]);
-    }
-}
-
-function minRowChange(curRow, minRow, maxRow, minCol, maxCol) {
-    for (let i = minCol; i <= maxCol; ++i) {
-        matrics[curRow][i] = ++count;
-    }
-    ++minRow;
-    if (minRow <= maxRow) {
-        maxColChange(maxCol, minRow, maxRow, minCol, maxCol)
-    }
-}
-
-function maxColChange(curCol, minRow, maxRow, minCol, maxCol) {
-    for (let i = minRow; i <= maxRow; ++i) {
-        matrics[i][curCol] = ++count;
-    }
-    --maxCol;
-    if (minCol <= maxCol) {
-        maxRowChange(maxRow, minRow, maxRow, minCol, maxCol);
-    }
-}
-
-function maxRowChange(curRow, minRow, maxRow, minCol, maxCol) {
-    for (let i = maxCol; i >= minCol; --i) {
-        matrics[curRow][i] = ++count;
-    }
-    --maxRow
-    if (minRow <= maxRow) {
-        minColChange(minCol, minRow, maxRow, minCol, maxCol);
-    }
-}
-
-function minColChange(curCol, minRow, maxRow, minCol, maxCol) {
-    for (let i = maxRow; i >= minRow; --i) {
-        matrics[i][curCol] = ++count;
-    }
-    ++minCol;
-    if (minCol <= maxCol) {
-        minRowChange(minRow, minRow, maxRow, minCol, maxCol);
-    }
-}
-initMatrics(rows, cols)
-displayMatircs(rows, rows)
+var spinMatrics = new SpinMatrics(7, 7)
+spinMatrics.displayMatircs();
 
 
 /* 输出结果

@@ -2,7 +2,7 @@
  * @Author: myerse.lee 
  * @Date: 2018-10-11 21:57:44 
  * @Last Modified by: myerse.lee
- * @Last Modified time: 2018-10-11 21:58:35
+ * @Last Modified time: 2020-06-06 17:01:50
  */
 
 class Stack {
@@ -23,7 +23,15 @@ class Stack {
             delete this._stack_array[this._curIndex];
             return item_pop;
         } else {
-            throw 'stack is null';
+            throw 'stack is empty';
+        }
+    }
+
+    peeK() {
+        if (this._curIndex > this._lastIndex) {
+            return this._stack_array[this._curIndex - 1];
+        } else {
+            throw 'stack is empty';
         }
     }
 
