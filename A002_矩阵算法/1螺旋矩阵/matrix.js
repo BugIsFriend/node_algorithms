@@ -2,16 +2,15 @@
  * @Author: myerse.lee 
  * @Date: 2018-10-11 21:57:44 
  * @Last Modified by: myerse.lee
- * @Last Modified time: 2020-06-06 17:15:50
+ * @Last Modified time: 2020-06-06 17:24:58
  * @ Desc: 螺旋矩阵；
  */
-
 class SpinMatrics {
 
     constructor(row, col) {
         this._row = row;
         this._col = col;
-        this._count = 0;
+        this._count = 9;
         this._matrics = null;
         this.initMatrix();
     }
