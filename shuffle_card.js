@@ -2,7 +2,7 @@
  * @Author: myerse.lee
  * @Date: 2019-10-28 15:46:48
  * @Last Modified by: myerse.lee
- * @Last Modified time: 2020-03-05 17:02:38
+ * @Last Modified time: 2020-06-30 10:27:36
  * @Desc 乱序一个数组 不开辟新的内存实现洗牌算法, 
  *  
  * 要求：不开辟新的数据，；
@@ -30,4 +30,5 @@ function shuffle_array(cards) {
 }
 
 console.log(shuffle_array([1, 2, 3, 4, 5, 6, 7, 8]))
+
 

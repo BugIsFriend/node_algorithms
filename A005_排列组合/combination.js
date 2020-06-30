@@ -2,7 +2,7 @@
  * @Author: myerse.lee 
  * @Date: 2018-11-18 12:33:07 
  * @Last Modified by: myerse.lee
- * @Last Modified time: 2020-06-29 12:10:09
+ * @Last Modified time: 2020-06-30 10:28:36
  * 数组的排列组合算法；
  * 
  */
@@ -44,3 +44,6 @@ var time_1 = new Date();
 console.log('cost time ' + ((time_1 - time_0) / 1000))
 console.log('sss11    ' + JSON.stringify(all_solutions))
 console.log('sss11    ' + all_solutions.length)
+
+
+// //  算出银行卡密码数字所有肯能行；
