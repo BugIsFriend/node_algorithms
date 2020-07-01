@@ -2,7 +2,7 @@
  * @Author: myerse.lee 
  * @Date: 2018-11-18 12:33:07 
  * @Last Modified by: myerse.lee
- * @Last Modified time: 2020-06-30 10:33:54
+ * @Last Modified time: 2020-07-01 10:58:21
  * 数组的排列组合算法；
  * 
  */
@@ -46,4 +46,4 @@ console.log('sss11    ' + JSON.stringify(all_solutions))
 console.log('sss11    ' + all_solutions.length)
 
 
-// todo 算出银行卡6位密码数字 所有情况；
+// todo  算出银行卡6位密码数字 所有情况； 0-9 选出六位数组， 
