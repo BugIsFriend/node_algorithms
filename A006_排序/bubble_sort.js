@@ -1,8 +1,8 @@
 /*
  * @Author: myerse.lee 
  * @Date: 2018-11-18 12:33:07 
- * @Last Modified by: myerse.lee
- * @Last Modified time: 2020-07-01 14:24:28
+ * @Last Modified by: lee
+ * @Last Modified time: 2020-07-08 15:06:02
  * 排序算法；
  */
 
@@ -13,8 +13,6 @@ function swap(list, i, j) {
     list[i] = list[j];
     list[j] = temp;
 }
-
-
 
 /** 
  * 冒泡排序算法；
