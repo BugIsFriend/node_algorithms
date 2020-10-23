@@ -1,9 +1,9 @@
 /*
  * @Author: myerse.lee 
  * @Date: 2018-10-11 21:57:44 
- * @Last Modified by: myerse.lee
- * @Last Modified time: 2020-06-06 17:24:58
- * @ Desc: 螺旋矩阵；
+ * @Last Modified by: lee
+ * @Last Modified time: 2020-10-23 10:15:38
+ * @ Desc: 二维螺旋矩阵； <跑马灯，水果机，一维组二维化>  可扩展；
  */
 class SpinMatrics {
 
