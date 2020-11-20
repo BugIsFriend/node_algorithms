@@ -7,8 +7,8 @@ function FindSequence(tarArray, unit = 1, sequenceLen) {
 
     for (let i = 0; i < tarArray.length; i++) {
         const key = tarArray[i];
-        let value = (!tmpMap.has(key)) ? 0 : tmpMap.get(key) + 1;
-        tmpMap.set(key, value);
+        let value = (!tmpMap.has(key)) ? 0 : tmpMap.get(key);
+        tmpMap.set(key, value + 1);
     }
 
     console.log(`ssss11         ${JSON.stringify(tmpMap)}`)

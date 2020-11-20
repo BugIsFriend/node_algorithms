@@ -1,11 +1,18 @@
 /*
  * @Author: myerse.lee 
  * @Date: 2018-11-18 12:33:07 
- * @Last Modified by: myerse.lee
- * @Last Modified time: 2020-07-01 10:58:21
+ * @Last Modified by: lee
+ * @Last Modified time: 2020-11-20 12:01:53
  * 数组的排列组合算法；
  * 
  */
+
+
+// 对于不重复元素的排列组合；
+
+// 对于重复元素的排列组合，可以列用数组下标，进行排列组合；
+
+// 改代码可优化；
 
 var source_t = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 var target_t = []

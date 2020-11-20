@@ -49,7 +49,7 @@ function ShellSort(list) {
     while (h >= 1) {
         for (let i = h; i < N; ++i) {
             for (let j = i; j >= h; j -= h) {
-                if (list[j] < list[j - h]) {
+                if (list[j] < list[j - h] && j >= h) {
                     let temp = list[j];
                     list[j] = list[j - h];
                     list[j - h] = temp;
@@ -60,7 +60,6 @@ function ShellSort(list) {
     }
     console.log(`ShellSort:    ${list}`);
 }
-
 
 let arr = [8, 12, 85, 5, 8, 3, 751, 18, 34, 73, 32, 39, 8, 6, 77, 8, 4, 3, 4, 2];
 ShellSort(arr)

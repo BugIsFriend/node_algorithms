@@ -125,3 +125,30 @@ for (let i = 0; i < matrGrid.length; i++) {
 }
 
 console.log(eliminate(1, 1, matrGrid))
+
+
+
+
+let obj = {
+    a: 1,
+    b: '数组算法'
+}
+
+
+let delgate = new Proxy(obj, {
+    set(target, prop, reciever) {
+        console.log(target[prop]);
+        console.log('1111   :' + (typeof reciever));
+    }
+})
+
+// delgate.a = 1;
+// delgate.a = 2;
+
+
+Reflect.set(obj, 'a', 2);
+console.log(obj['a'])
+
+function aaa(params) {
+
+}
