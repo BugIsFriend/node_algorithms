@@ -5,26 +5,6 @@ class DTree extends Tree {
     constructor() {
         super();
     }
-
-    /**
-     *  初始节点入队列，
-     *  while(队列不为空);
-     *       节点出队列；
-     *       节点左子树不为空，则入队列
-     *       节点右子树不为空，则入对立
-     * */
-    BSFVisit() {
-        let queue = new Array();
-        queue.push(this.root);
-        while (queue.length > 0) {
-            let node = queue.shift();
-            if (node) {
-                console.log(node.value)
-            }
-            if (node && node.left) queue.push(node.left);
-            if (node && node.right) queue.push(node.right)
-        }
-    }
 }
 
 

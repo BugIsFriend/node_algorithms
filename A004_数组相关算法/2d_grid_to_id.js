@@ -5,7 +5,7 @@
  * 
  */
 
-function converGridToId(row, col, gridRowCount, gridColCount) {
+function converGridToId(row, col, gridColCount) {
     return row * gridColCount + col;
 }
 
