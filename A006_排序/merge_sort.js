@@ -53,3 +53,17 @@ let c_arr = new Array(arr.length);
 sort(arr, 0, arr.length - 1);
 
 console.log(arr)
+
+function fun(a, b) {
+    console.log(b);
+    return {
+        fun: function (c) {
+            return fun(c, a);
+        }
+    }
+}
+
+var d = fun(0);
+d.fun(1);
+d.fun(2);
+d.fun(3);
