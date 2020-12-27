@@ -2,7 +2,7 @@
  * @Author: myerse.lee
  * @Date: 2019-10-28 15:46:48
  * @Last Modified by: lee
- * @Last Modified time: 2020-07-09 10:42:13
+ * @Last Modified time: 2020-12-27 16:57:23
  * @Desc 图 
  */
 
@@ -30,7 +30,6 @@ class Graph {
         this.adj = [];
     }
 
-
     get V() {
         return this._V;
     }
@@ -39,21 +38,19 @@ class Graph {
         return this._E;
     }
 
-    addEdge(v, w) {  // 给顶点v，w添加一条边；
-
+    addEdge(v, w) {         // 给顶点v，w添加一条边；
+        this.adj[v].push(w);
     }
 
-    adj(v) {  // 返回与v相邻的边: 邻接表
-
+    adj(v) {                // 返回与v相邻的边: 邻接表
+        return this.adj[v];
     }
 
-    // 计算V的度数；
-    static degree(G, V) {
+    static degree(G, v) {   // 计算V的度数；
         return G.adj(v).lenght;
     }
 
-    // 返回顶点的最大度数；
-    static maxDegree(G) {
+    static maxDegree(G) {    // 返回顶点的最大度数；
         let max = 0;
         for (var v = 0; v < G.V; v++) {
             if (this.degree(G, v) > max) {
@@ -63,11 +60,9 @@ class Graph {
         return max;
     }
 
-    // 计算平均度数
-    static avgDgree(G) {
+    static avgDgree(G) {    // 计算平均度数
         return 2 * G.E / G.V;
     }
-
 
     static numberOfSelfLoops(G) {
         let count = 0;
