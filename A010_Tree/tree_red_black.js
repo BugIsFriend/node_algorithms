@@ -16,4 +16,6 @@
  *     1.如果右子结点是红色，而左子结点是黑色，进行左旋；           isRed(h.right) && !isRed(h.left)   rotateLeft(h);
  *     2.如果左子结点是红色， 且它的左子节点也是红色， 进行右旋；    isRed(h.right) && isRed(h.left)    rotateRight(h);
  *     3.如果左右子节点都是红色， 进行颜色翻转；                  isRed(h.right) && isRed(h.left)    flopColors(h);
+ * 
+ * 红黑树的删除操作；
 */
