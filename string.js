@@ -1,4 +1,9 @@
 
+
+//使用二分算法；速度更快
+
+
+// 切割字符串
 function mySplit(content, splitStr) {
     if(content.length == 0 || splitStr.length ==0 || splitStr.length > content.length ) return [];
 
@@ -27,5 +32,6 @@ function mySplit(content, splitStr) {
     }
     return spliteArr;
 }
+
 
 console.log( mySplit("12||2ss1||11||22||adfadf||ssss", "||" ));

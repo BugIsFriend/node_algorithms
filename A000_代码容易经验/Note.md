@@ -1,9 +1,9 @@
-# 删除数组的时候元素的时候：
+# 删除数组的时候元素的时候
+
     for(let i =0; i<arr.length; i++){
         if(arr[i] == tar){
             arr.splice(i,1);
         }else{
-            // TODO Something;
         }
     }
 
