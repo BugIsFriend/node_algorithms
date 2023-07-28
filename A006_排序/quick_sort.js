@@ -34,7 +34,7 @@ function partition(arr, lo, hi) {
 function quik_sort(arr, lo, hi) {
     if (lo < hi) {
         let partIndex = partition(arr, lo, hi);
-        console.log(arr, partIndex)
+        // console.log(arr, partIndex)
         quik_sort(arr, lo, partIndex - 1);
         quik_sort(arr, partIndex + 1, hi);
     }
